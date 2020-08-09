@@ -8,8 +8,8 @@ import androidx.ui.layout.padding
 import androidx.ui.tooling.preview.Preview
 import androidx.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
-import com.lorenzoog.testingjetpackcompose.githubService
 import com.lorenzoog.testingjetpackcompose.model.User
+import com.lorenzoog.testingjetpackcompose.services.GithubService
 import com.lorenzoog.testingjetpackcompose.ui.TestingJetpackComposeTheme
 import com.lorenzoog.testingjetpackcompose.ui.profile.Profile
 import kotlinx.coroutines.*
@@ -19,6 +19,8 @@ private const val GITHUB_USERNAME = "LorenzooG"
 @Composable
 fun App() {
   var user: User? by state<User?> { null }
+
+  val githubService = GithubService.current
 
   onCommit {
     val userDeferred = GlobalScope.async(Dispatchers.IO) {
