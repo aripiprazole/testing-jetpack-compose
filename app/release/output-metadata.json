@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.lorenzoog.testingjetpackcompose",
+  "applicationId": "me.devgabi.testingjetpackcompose",
   "variantName": "release",
   "elements": [
     {
